@@ -1,0 +1,15 @@
+TRANSITION : -
+ this property defines the smoothness. like how the thing changing their position will look like.
+
+values:-
+transition-property : property on which we want to apply transition. if we want to give to multiple properties then we can add those properties in values with 							comma seperated. or if we want to apply to all then we can write as all.	 
+
+transition-delay : this property also accept the time and that will define, how much time later our transition will start.
+
+transition-duration : this property accept the time for the time transition will complete. we can also give different time to different properties by writing 							them comma seperated or if wanr to apply same to all then give only that time.
+
+transition-timimg-function : this property has many values which define how the transition will look like, like fast, slow,initial fast then slow and vice versa 								and many more.
+
+transition : this is combination of all, first take property space duration space timimg-function space delay.
+
+* you can only apply transition property if you already defined that property.

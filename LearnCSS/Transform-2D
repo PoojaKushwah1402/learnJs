@@ -1,0 +1,42 @@
+Transform-2D,3D
+
+CSS transforms allow you to move, rotate, scale, and skew elements.
+
+For 2D- 
+TRANSFORM this property only helpful for block, inline-block html elements but not inline elements, and has various values listed below: 
+
+: rotate(angle) - 	while seting rotate function we give angle as argument like rotate(90deg), this will rotate the the html element by the given degree.
+					
+
+: translate() - this take value function take 2 arguments(x,y). and it will move that box with those arguments like x from x-axis and y from y-axis.
+: translateX() - this takes one argumnet and move html element from x-axis.
+: translateY() - this takes one argumnet and move html element from y-axis.
+
+: scaleX() - this value function takes numeric (n)) as a parameter and it will grow the html horzontaly element by the nth time.
+: scaleY() - this value function takes numeric (n)) as a parameter and it will grow the html vertically element by the nth time.
+: scale() - this value function takes numeric (n)) as a parameter and it will grow the html horzontaly and vertically element by the nth time.
+
+: skewX() - this take a angle as argument and tilt or skew the html element with that degree in X direction.
+: skewY() - this take a angle as argument and tilt or skew the html element with that degree in Y direction.
+: skew() -this property function takes 2 input(X,Y) or if Y is not given then it only applies to X. this value skew the html element with that degree. 
+
+: matrix(n,n,n,n,n,n) it is the sum of all abouve.
+: none - (default)
+
+* if we want multiple properties at one then we can use matrix or we can write like this -> (transform : scale() rotate() skew()).
+
+along with transform there is one more property which is TRANSFORM-ORIGIN :-
+which take 2 numeric values as input which tells us what is the origin point for this rotation.
+
+For 3D-
+
+
+all the above properties are same just x is added eg. translateZ(),scaleZ() and in rotate different angles are added eg. rotatex(),rotateZ()..
+and also fro combination of all x,y,z for all values '3d' is added. like translate3d(),scale3d() etc.
+
+* scew() value is not there in 3D.
+also a new property added that is 
+perspective(n) : this value makes a 3d looks possible in our 2d screen. n is the pixcel value which how much close you are to the box. its good to give large 					value. we give this value either to parent or along with transform.
+
+
+Perspective means is the art of showing 3d object on 2d.

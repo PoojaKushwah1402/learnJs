@@ -1,0 +1,97 @@
+GRID-- this preperty is used to make element flexible or we can say responsive, it works on 2-diemension.
+This Works on 2 dimensional (i.e row and column). It replaces the FLOAT.
+IT is one of the value of DISPLAY. after setting DISPLAY:GRID we can use many property of grid.
+parent container - GRID container.
+ALL child items - GRID items
+individual grid item - GRID cell
+lines between the GRID cell are knowns as GRID line and space between line and grid cell are gutter.
+gird area is the area between a grid row and a grid column.
+
+After setting DISPLAY:GRID. it provides us many more properties to layout the webpage.
+
+:GRID-TEMPLATE-COLUMN - this property expects how many column will be their in this grid-container, and what will be their width.
+						eg- "200px 300px auto" make three columns whith width 200px, 300px and last one will of remaining width of container.
+						also we can use function repeat(no, width/height) eg - repeat(3,200px) this will create 3 columns of 300px.
+						one new unit introduces that is fraction(fr). eg "1fr 2fr 1fr" this will create a 3 columns with x-2x-x width.
+
+:GRID-TEMPLATE-ROWS - this property is same as above but it creates a rows.
+auto-fit,auto-fill these 2 values also used in above 2 properties along with repeat(auto-fill/fill,x). auto fill will create n number of grid-items of x, and only as much defined will take position other space will be left blank. but auto-fill will only create as much needed or defined of x, rest space will be blank.
+
+fit-content() - works as max-width/height.
+
+
+
+
+:GRID-GAP : this property accepts a numeric value and gives a space thatmuch space between the every GRID CELL. also also it is combo of below 2. first 			it take row and then column.
+:GRID-ROW-GAP -
+:GRID-column-GAP -
+
+:GRID-POSITION - this property is used to define position of a grid cell(we give this property to the grid-cell) within the grid container.values could be- 
+				GRID-row-start : at which row you want to place the grid-item.(it takes a numeric value. eg '2')
+				GRID-row-end : at which row you want to end value mostly row-start+1(eg. '3').
+				grid-row : combo of abouve 2. "eg. '2 / 3'
+				grid-column-start :t which column you want to place the grid-item.(it takes a numeric value. eg '2')
+				grid-column-end :at which column you want to endvalue mostly row-start+1(eg. '3')
+				grid-column: combo of abouve 2. "eg. '2 / 3'
+				grid-area : combo of above 4. (eg- "row-start / column-start / row-end / column-end").
+
+with GRID-position we can make a whole page layout (merging 2 rows nd 2 columns etc.) we can also use span in values like - '2 / span 3'  this will start a row or column.(consider here row) then it will start from 2nd row till 4th row. like it will make a lasingle that column of merging 3 rows. (span 3 means it will merge 3). one more thing '2 / -1' this will start from 2nd and merge till end.
+one more property for positioning : 
+ORDER : max value of order will go in last.
+
+
+
+for dynamically height-width change,
+we can also give values as MAX-CONTENT ,MIN-CONTENT,MINMAX()
+MAX-CONTENT - it assigns as value for the property of mainly grid-template-column. this property will increase the width of the cell as contentn inside grows, it never breaks the line.
+MIN-CONTENT - this will incease the widhth as the data grows, the max width will be the biggest word in that content. if externally width defined then it will overflow the data.
+MINMAX() - it is a function takes as 2 parameter. first in minimum value and second is max value.
+
+For doing positioning of a small page, we have a one more method by using - GRID-TEMPLATE-AREA ,GRID-AREA.
+: GRID-AREA - it is used to game unique name to the grid-cell. we define it in each individual grid-cell, to give them name.
+:GRID-TEMPLATE-AREA - it is used give layout. it defined in grid-container. (eg. GRID-TEMPLATE-AREA : "gridcell1 gridcell1 gridcell2"
+"menu menu ."
+"menu menu box"
+"footer footer footer");
+
+it will make the layout same as above. dot is used where we dont wanna put anything, but we cant leave them blank otherwise it will not work.
+
+EXPLICIT-GRID: these are the GRID-items whose rows and columns are height and width are defined by GRID-TEMPLATE-COLUMN/ROW.
+IMPLICIT-GRID: other than above which are left behind are implicit grid. for implicit grid there are 3 properties to define them.
+ 	GRID-AUTO-FLOW: It will be either column or row, which defined all implicit grid will be aligned in which direction. and after that we can also give dense which will fill the gap if exist.
+ 	GRID-AUTO-COLUMNS: if the value of above will be column then this will define the width.
+ 	GRID-AUTO-ROWS: else this will dehine the height.
+
+
+:GRID-ALignment (alignment of grid cell inside inside its grid space. )
+for VERTICAL 2 property exist:align-items(for container), align-self(for individual.)
+properties - start,end,center,strech(default).
+or HORIZONTAL 2 property exist:justify-items(for container), justify-self(for individual.)
+properties - start,end,center,strech(default).
+
+combo of above 2 will be place-items : <align-item> <justify-item>,place-self : <align-self> <justify-self>.
+
+GRID-TRACKS : this is for the space left inside container (eg. 5x is container but our height/width takes only 3x then this property is for that 2x.) or we can say this will align whole grid items.either left right or anything. 
+properties : align-content(for vertical), justify-content(for horizontal), place-content(combo).
+start(default),end,center,strech,space-around-space-between,space-evenly.
+space-between: spread all spaces between first and last cell.
+space-around : spread space left-right equal.
+space-evenly : spread space between all rows/columns equaly.
+
+
+We can also use nested GRID.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				 

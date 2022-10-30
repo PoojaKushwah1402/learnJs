@@ -1,0 +1,53 @@
+AJAX is asynchronous javascript and XML.
+AJAX is a new technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS, and Java Script. In the purest sense, the user would never know that anything was even transmitted to the server.
+Conventional web applications transmit information to and from the sever using synchronous requests.
+XML is commonly used as the format for receiving server data, although any format, including plain text, can be used.
+
+AJAX is a web browser technology independent of web server software.
+A user can continue to use the application while the client program requests information from the server in the background.
+AJAX is based on the following open standards −
+
+-Browser-based presentation using HTML and Cascading Style Sheets (CSS).
+-Data is stored in XML format and fetched from the server.
+-Behind-the-scenes data fetches using XMLHttpRequest objects in the browser.
+-JavaScript to make everything happen.
+XMLHttpRequest-JavaScript object that performs asynchronous interaction with the server.
+"While trying AJAX example, there is not discontinuity and you get the response very quickly, but when you try the standard GCI example, you would have to wait for the response and your page also gets refreshed."
+
+Steps of AJAX Operation
+	A client event occurs.
+	An XMLHttpRequest object is created.
+	The XMLHttpRequest object is configured.
+	The XMLHttpRequest object makes an asynchronous request to the Webserver.
+	The Webserver returns the result containing XML document.
+	The XMLHttpRequest object calls the callback() function and processes the result.
+	The HTML DOM is updated.
+---"XMLHttpRequest (XHR) is an API that can be used by JavaScript, JScript, VBScript, and other web browser scripting languages to transfer and manipulate XML data to and from a webserver using HTTP, establishing an independent connection channel between a webpage's Client-Side and Server-Side."
+==Despite the XML and Http in the name, XHR is used with other protocols than HTTP, and the data can be of many different types like HTML, CSS, XML, JSON, and plain text.
+
+
+
+
+Tip: Don't get confused by the term X (i.e. XML) in AJAX. It is only there for historical reasons. Other data exchange format such as JSON, HTML, or plain text can be used instead of XML.
+
+To perform Ajax communication JavaScript uses a special object built into the browser—an XMLHttpRequest (XHR) object—to make HTTP requests to the server and receive data in response.
+
+All modern browsers (Chrome, Firefox, IE7+, Safari, Opera) support the XMLHttpRequest object.
+
+
+Sending Request and Retrieving the Response---------
+		var request = new XMLHttpRequest();
+		request.open("GET", "info.txt"); -Or- request.open("POST", "add-user.php");
+		request.send(); -Or- request.send(body);
+		Note: The send() method accepts an optional body parameter which allow us to specify the request's body. This is primarily used for HTTP POST requests, since the HTTP GET request doesn't have a request body, just request headers.
+In GET method, the data is sent as URL parameters. But, in POST method, the data is sent to the server as a part of the HTTP request body. Data sent through POST method will not visible in the URL.
+
+                                < JQUERY >
+jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+		"The on() method attaches one or more event handlers for the selected elements."
+
+Query provides several methods for AJAX functionality.
+
+With the jQuery AJAX methods, you can send string or plain object to the server - And you can load the external data directly into the selected HTML elements of your web page!
+
+

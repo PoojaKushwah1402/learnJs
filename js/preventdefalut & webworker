@@ -1,0 +1,15 @@
+preventdefalut.
+
+this is the javascript method which helps to prevent the defeult behavior of a event.
+
+every event in has some default behavior which executes whenever the event occurs.
+
+preventdefault method helps to prevent those default behaviors.
+
+
+WEBWORKER :-
+web worker provides a way to perform some thing in background which doesnt affect your UI.
+some function can be complex calculation. or somthing that can take time due to complexness. so we can perform them in background.
+webworker uses methods like postmessage and onmessage to communicate(between page and worker).
+As webworker executes in seperate thread it does not have access to DOM element like parent or anything.
+you can also terminate the worker using x.termineworker().

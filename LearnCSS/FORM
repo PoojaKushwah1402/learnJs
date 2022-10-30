@@ -1,0 +1,14 @@
+FORM
+
+
+tags :
+ select -> works with the option tag.
+ optgroup -> add groups in select tags.
+ datalist -> while searching you can write also.
+ input type='file' : this will used to upload the file from your PC.
+ accept : this tag is used to apply filters on which file should be accepted.
+
+ The <fieldset> element is used to group related data in a form.
+
+The <legend> element defines a caption for the <fieldset> element
+

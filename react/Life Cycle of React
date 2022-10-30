@@ -1,0 +1,20 @@
+Life Cycle of React
+
+We want to set up a timer whenever the Clock is rendered to the DOM for the first time. This is called “mounting” in React.
+
+We also want to clear that timer whenever the DOM produced by the Clock is removed. This is called “unmounting” in React.
+
+Mounting : when instance of a component is created and inserted into a DOM element
+Methods -> construcor, static getDerivedStateFromProps, render and componentDidMount.
+
+The componentDidMount() method runs after the component output has been rendered to the DOM. This is a good place to set up a timer:
+
+
+Updating : when a component is being re-rendering as a result of changes to its probs or state.
+Methods -> static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate and componentDidUpdate.
+
+Unmounting :  when a component is being removed from from a DOM.
+Methods -> componentWillUnmount
+
+Error Handling : When their is an error during rendering, in a lifecycle method, or in a constructor of any of the child omponent.
+Methods -> static getDerivedStateFromError, componentDidCatch

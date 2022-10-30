@@ -1,0 +1,40 @@
+The following events are based on the KeyboardEvent type. They can be delivered to any object which implements GlobalEventHandlers, including Element, Document, and Window. In the list below, each event links to the documentation for the Document handler for the event, which applies generally to all of the recipients.
+
+keydown
+A key has been pressed.
+keyup
+A key has been released.
+Obsolete events
+keypress 
+A key that normally produces a character value has been pressed. This event was highly device-dependent and is obsolete. You should not use it.
+Usage notes
+There are three types of keyboard events: keydown, keypress, and keyup. For most keys, Gecko dispatches a sequence of key events like this:
+
+When the key is first pressed, the keydown event is sent.
+If the key is not a modifier key, the keypress event is sent.
+When the user releases the key, the keyup event is sent.
+
+Some keys toggle the state of an indicator light; these include keys such as Caps Lock, Num Lock, and Scroll Lock. On Windows and Linux, these keys dispatch only the keydown and keyup events.
+
+Auto-repeat handling
+When a key is pressed and held down, it begins to auto-repeat. This results in a sequence of events similar to the following being dispatched:
+
+keydown
+keypress
+keydown
+keypress
+<<repeating until the user releases the key>>
+keyup
+This is what the DOM Level 3 specification says should happen. There are some caveats, however, as described below.
+
+In some GTK-based environments, auto-repeat dispatches a native key-up event automatically during auto-repeat, and there's no way for Gecko to know the difference between a repeated series of keypresses and an auto-repeat. On those platforms, then, an auto-repeat key will generate the following sequence of events:
+
+keydown
+keypress
+keyup
+keydown
+keypress
+keyup
+<<repeating until the user releases the key>>
+keyup
+In these environments, unfortunately, there's no way for web content to tell the difference between auto-repeating keys and keys that are just being pressed repeatedly.

@@ -1,0 +1,8 @@
+DIV
+
+-> BOX-SIZING - this property helps to maintain the box size (width).
+ 
+	 :BORDER-BOX - this property helps to maintain the width of the box no matter how much padding and border you give.
+
+	 :CONTENT-BOX - this is default one, it will not do any thing.
+

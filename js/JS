@@ -1,0 +1,43 @@
+JS
+
+Javascript is converted in language understand by browser with the help of JS engine. every browser has different or same engine.
+first engine was SPIDERMONCKEY.
+chrome use -V8 js engine.(most famous)
+
+NODEJS-
+Its a run time environment where you can run javascript. and it uses V8 engine .
+
+
+ECMA script is a standard and javascript implements that standard
+
+
+	
+
+Function getCount(root, count, targetSum) {
+Let newCount = count + root.val;
+Let sum=0, left, right;
+     if(!root.left && root.right){
+      Right = getCount(root.right, newCount, targetSum)
+      }
+      Else if(root.left && !root.right){
+      Left = getCount(root.left, newCount, targetSum)
+      }
+      Else if(!root.right && !root.left){
+	if(newCount === targetSum){
+	Return 1;
+            }
+	Return 0;
+     }
+     Else {
+
+        left = getCount(root.left, newCount, targetSum)
+       right =  getCount(root.right, newCount, targetSum)
+
+       }
+	Sum = sum+left+right;
+          Return sum;
+}
+
+Function getValidPaths(TreeNode root, let targetSum) {
+	Return getCount(root, 0, targetSum);
+}

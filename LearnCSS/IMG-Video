@@ -1,0 +1,20 @@
+IMG-Video
+
+object-fit Property:
+
+The object-fit property is used to specify how an <img> or <video> should be resized to fit its container.
+
+properties :
+:Fill - it will strech the image. with strech and scew within that following area.
+
+:cover - this will cover the entire height and width given or if image is larger then that then it will corp the image, in sort it will stop the over-flow but with croping the image.
+
+:contain - it will also capable of removing the overflow, but it will make the image in that frame to fit by removing the extra space with white background. like when we use photo editor to make image of 1:1, it will resize image with the white in extra.
+
+:Scale-down : as same to conatin.
+
+:none - in none it will be displayed as it is , if the image area is less then the given area then it will not strech but move to the center as it is.
+
+
+OBJECT-POSITION : this is used to define from where we want to crop the image. like we can give left,right,top,bottom, then it dont crop from that particular position. like if we have given left then the image will not crop from left. but default it is center . 
+also we can give .

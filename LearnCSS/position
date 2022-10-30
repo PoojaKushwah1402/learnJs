@@ -1,0 +1,44 @@
+CSS (POSITION) ;
+
+HTML elements are diveded in 2 parts : inline element, or block element.
+
+HTML tags also have attributes, with the help of whose we can decide we need to dispaly that content, but the problem is these attributes
+ genreally have only 3 values. LEFT,RIGHT,CENTER. but if we want to display content at somewhere specific position then we need to use CSS.
+
+ POSITION: is important to align HTML element at some specific or our desirable position.  
+
+A POSITIONED element is alwyas one whose property is other than STATIC.
+
+ in CSS we have POSITION property which have 4 values  :
+ STATIC: this is default,
+ RELATIVE,
+ ABSOLUTE,
+ FIXED.
+ 
+ with the setting of position property we can able to display element in webpage at our desirable position, by setting 4 more properties:
+ TOP,LEFT,RIGHT,BOTTOM.
+ but we could not set abouve four properties with POSITION value as STATIC.(as its default, or it means nothing)
+
+FIXED :
+this property fixed the element in the browser; it takes abouve four property and that property works with respect to browser.
+if you set top:90px; it will set this from browser, rather than its parent.
+we can say if we apply FIXED property then it will take browseras parent for above 4 property;
+
+RELATIVE:
+An element set as relative is set above 4 as its current position. or relative to its current position.
+if you set abouve 4 then it will set them from its current position.
+like if you set top:40px then it will set to 40px below from its current position.;
+for the bottom property it will move upward from its current position.
+
+ABSOLUTE:
+for position value ABSOLUTE the value of above four will be set with respect to its nearest ancestor having POSITON value other than STATIC.
+if no ancestor found with POSITIONED then it will set with respect to browser.
+if you set left and right both as 0 then it will increase the width and make it possible.
+
+STICKY :
+Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.
+
+The element is positioned based on the user's scroll position
+A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+Note: Not supported in IE/Edge 15 or earlier. Supported in Safari from version 6.1 with a -webkit- prefix.

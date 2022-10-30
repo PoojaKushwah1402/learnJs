@@ -1,0 +1,44 @@
+FLEX
+: FLEX - 
+this preperty is used to make element flexible or we can say responsive, it works on one-diemension(i.e row or column) that is at a time can only work either vertically or horizonatally. Flex property we set to the (flex container)parent HTML element which makes all its child element(flex items) flexible(i.e the become responsive). there are multiple other properties are available along with flex.
+	
+	:FLEX-Direction -(row(default),row-reverse,column,column-revers)
+	
+	:FLEX-WRAP -(nowrap(default),wrap,wrap-reverse)
+	 			this property is used where data is overflow from the flex container. wrap will make flex-items to fint in flex-container in normal flow(top-bottom,left-right) while wrap-reverse also do the same thing but in opposite direction (bottom-top,left-right).
+	 			https://css-tricks.com/almanac/properties/f/flex-wrap/
+	
+	:FLEX-FLOW is a combination of above two, it takes vakue as "column wrap" or "row nowrap" etc.
+
+
+						SPACE-BETWEEN - put all space between (first and last will be at corner)
+						SPACE-AROUND - give equal space to left and right, which cause start and end have margin type space that is less as compare to other.
+						SPACE-EVENLY - gives equal space from start to end in between 
+	
+	:JUSTIFY-CONTENT - (flex-start(default),flex-end,center,space-around,space-between,space-evenly)
+						used to alight content horizontaaly/vertically depending upon flex-direction.
+
+	:ALIGN-ITEMS - (flex-start(stick to top for row nd left for column),flex-end(to end),center,strech(default),baseline(alignment of height or any other 					thing will be done from below text ))
+
+	:ALIGN-CONTENTS - (flex-start,strech(default),flex-end,center,space-around,space-between,space-evenly)
+						used for verticle alignment for morethan one rows.
+
+	:ALIGN-SELF - (flex-start,auto(take parents value),strech,flex-end,center,baseline).
+					this works same as ALIGN-ITEMS but this works on individual flex items but not on flex container.
+	
+	:ORDER -  this property also works for flex items,its value is integer. it makes them to change their order. or switch position. works on lowest to 			heighest , lowest one will be at start and heighest one will be at end.
+	
+	:FLEX-GROW - this property is also used by flex items. it accept a numeric value which indicateds that, that particular flex-content will take that 				times space out of all , we can assign seperatly to all items if we want them to grow or shrink.
+	
+	:FLEX-BASIS - it mainly used as max or min width of flex-items.
+	
+	:FLEX-SHRINK - it will decide wether you want to make particcular item responsive or not, it takes numeric value 0 will be for non responsive other 				than that will make it responsive. 
+	combination of above 3 properties - 
+		FLEX : grow shrink basis. 
+
+	MARGIN : auto {this value for this property will take all the space available and make it as margin,eg if i set margin:auto then it will align elemnt 			to center of all available space same as if margin-left/right/bottom as that position according to space available }
+
+	we can also use nested FLEX.
+
+
+	Inline-flex: Displays an element as an inline-level flex container. The display:inline-flex does not make flex items display inline. It makes the flex container display inline. The main difference between display: flex and display: inline-flex is that display: inline-flex will make the flex container an inline element while it’s content maintains its flexbox properties. In the below picture, the flex container comprises Computer, Science, Portal, and the yellow area.
